@@ -1,0 +1,19 @@
+@import './header/header';
+@import './footer/footer';
+@import './contact';
+@import './promoCards';
+@import './cards/cards';
+@import './head';
+@import './about/about';
+@import './sort';
+@import './read-now';
+@import './news-feed';
+@import './socials';
+@import './map';
+@import './news/news';
+
+.line {
+    background: $Neutral300;
+    height: 1px;
+    width: 100%;
+}
