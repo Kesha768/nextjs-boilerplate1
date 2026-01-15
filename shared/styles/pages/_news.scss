@@ -11,16 +11,80 @@
     }
 
     &__content {
-        margin-top: 24px;
+        margin-top: -16px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        column-gap: 32px;
     }
 
     &__left-content {
         max-width: 1012px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-image {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    &-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    &-image figcaption {
+        color: $Neutral400;
+        font-size: 12px;
+    }
+
+    &-section p {
+        font-size: 16px;
+        color: $Neutral700;
+        font-weight: 500;
+    }
+
+    &-section h2 {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 54px;
+        color: $Neutral700;
+        margin-bottom: 32px;
+    }
+
+    &-section h3 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 44px;
+        color: $Neutral700;
+        margin-bottom: 24px;
+    }
+
+    &-section h4 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: $Neutral700;
+        margin-bottom: 24px;
+    }
+
+    &-section h5 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        color: $Neutral700;
+        margin-bottom: 24px;
     }
 
     &__right-content {
@@ -158,3 +222,64 @@
         background-color: $Neutral300;
     }
 }
+
+.num-list-block {
+    margin-bottom: 32px;
+}
+
+.num-list-block h5 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $Neutral700;
+    margin-bottom: 24px;
+}
+
+.num-list-block ol {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.num-list-block ol li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $Neutral700;
+}
+
+.mark-list-block {
+    margin-bottom: 32px;
+}
+
+.mark-list-block h5 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $Neutral700;
+    margin-bottom: 24px;
+}
+
+.mark-list-block ul {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    list-style: none;
+}
+
+.mark-list-block ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 20px; 
+}
+
+.mark-list-block ul li:before {
+    content: '•';
+    color: $Primary700;  
+    position: absolute;
+    left: 35px;
+}
+

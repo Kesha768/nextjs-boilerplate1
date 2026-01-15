@@ -32,3 +32,53 @@
         }
     }
 }
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .read-now__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .read-now__content .newsCard .newsCard__description .newsCard__description-title {
+        -webkit-line-clamp: 2;
+    }
+
+    .read-now__content .newsCard-S:nth-last-child(-n+4) {
+        border-bottom: 1px solid $Neutral300;
+    }
+
+    .read-now__content .newsCard-S:nth-last-child(-n+8) {
+        border-bottom: none;
+    }
+    
+    .read-now__content .newsCard-S:nth-child(n+7) {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .read-now__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    .read-now__content .newsCard-S:nth-last-child(-n+2) {
+        border-bottom: 1px solid $Neutral300;
+    }
+    
+    .read-now__content .newsCard-S:nth-last-child(-n+1) {
+        border-bottom: none;
+    }
+
+    .newsCard-M .newsCard__description-title, .newsCard-S .newsCard__description-title {
+        -webkit-line-clamp: 1;
+    }
+
+    .read-now__content .newsCard-S:nth-child(n+7) {
+        display: none;
+    }
+
+    .read-now__content .newsCard-S:nth-last-child(-n+8) {
+        border-bottom: none;
+    }
+}
