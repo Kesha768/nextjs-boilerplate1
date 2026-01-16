@@ -22,6 +22,11 @@ export const NewsPage: React.FC<Props> = ({ data, newsData }) => {
       <Head breadcrumbs title={data.title} breadcrumbsSlug={data.title} />
       <div className="news__content">
         <div className="news__left-content">
+          <NewsInfo
+            update={data.info.update}
+            author={data.info.author}
+            timeRead={data.info.timeRead}
+          />
           <div className="news__tags">
             {data.tags.map((tag, index) => (
               <div key={index} className="news__tag">
@@ -99,11 +104,6 @@ export const NewsPage: React.FC<Props> = ({ data, newsData }) => {
         </div>
 
         <div className="news__right-content">
-          <NewsInfo
-            update={data.info.update}
-            author={data.info.author}
-            timeRead={data.info.timeRead}
-          />
           <NewsFeed title="Новости" link="news" data={newsData} />
         </div>
       </div>
