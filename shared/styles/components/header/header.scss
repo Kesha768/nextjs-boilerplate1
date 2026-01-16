@@ -44,10 +44,6 @@
         display: none;
     }
 
-    .header__row {
-        display: none;
-    }
-
     .header {
         &__logo-mob {
             display: block;
@@ -175,7 +171,15 @@
 }
 
 @media (max-width: 767px) and (min-width: 360px) {
-.burger-block {
+    .search,
+    .tabs,
+    .header__row-logo,
+    .topBar,
+    .select  {
+        display: none;
+    }
+
+    .burger-block {
         position: fixed;
         top: 0;
         right: 0;
@@ -255,6 +259,50 @@
     }
 
     .header {
+                &__mob {
+            &-search {
+                display: flex;
+                flex-direction: row;
+                column-gap: 8px;
+                padding: 16px;
+                border-radius: 26px;
+                background-color: $Neutral200;
+            }
+
+            &-icon {
+                padding: 1.67px;
+            }
+
+            &-input {
+                width: 176.23px;
+                height: 20px;
+                background: none;
+                border: none;
+            }
+        }
+
+        &__burger-circle {
+            display: none;
+        }
+
+        &__info-mob {
+            display: flex;
+        }
+
+        &__mob-search {
+            display: flex;
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 12px;
+        }
+        
+        &__logo-mob {
+            display: block;
+        }
+
         &__burger {
             &-circle {
                 width: 52px;
