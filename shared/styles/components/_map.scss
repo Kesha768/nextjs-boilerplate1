@@ -8,6 +8,7 @@
 
     &__title {
         font-size: 40px;
+        line-height: 44px;
         color: $Neutral700;
     }
 
@@ -144,6 +145,12 @@
         font-size: 16px;
         margin: 20px auto 0px auto;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $Primary700;
+            color: $Neutral700;
+        }
     }
 }
 
@@ -201,6 +208,10 @@
 
 @media (max-width: 1199px) and (min-width: 768px) {
     .map {
+&__title {
+    max-width: 400px;
+}
+
         &__nijni {
             top: 282.5px;
             left: 121.65px;
@@ -240,7 +251,17 @@
             grid-template-columns: repeat(2, 1fr); 
             grid-template-rows: repeat(2, 1fr);
             gap: 8px 16px;
-        }        
+
+            .newsCard{width: 100%;}
+        }     
+        
+        &__button-link {
+            padding: 8px 16px;
+            margin-right: auto;
+            margin-left: 0;
+            margin-top: 24px;font-size: 14px;
+            
+    }
     }
 
     .map .newsCard {
@@ -254,7 +275,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .map__circle {
         display: none;
     }
@@ -301,11 +322,14 @@
             order: 2;
             height: 762px;
             width: 100%;
+            overflow: hidden;
         }
 
         &__main-info-img {
             object-fit: cover;
-            object-position: left;
+            transform: scale(1.5); 
+           object-position: left;
+           transform-origin: 20% 40%;
         }
 
         &__news-list {
@@ -314,10 +338,19 @@
             row-gap: 8px;
             width: 100%;
         }
+
+        &__button-link {
+            padding: 8px 16px;
+            margin-right: auto;
+            margin-left: 0;
+            margin-top: 24px;
+            font-size: 14px;
+    }
     }
     .map .newsCard {
         width: 100%;
         border-bottom: 1px solid $Neutral300;
         padding-bottom: 8px;
+        height: 89px;
     }
 }
